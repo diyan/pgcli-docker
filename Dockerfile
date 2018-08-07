@@ -14,5 +14,11 @@ RUN set -x \
   && apk del $buildDeps \
   && rm -rf /var/cache/apk/* /tmp/py-setproctitle*
 
+# a volume for:
+# 1 pgcli-config
+# 2 pgcli-log
+# 3 pgcli-hisory
+VOLUME /root/.config/pgcli
+
 ENTRYPOINT ["/usr/local/bin/pgcli"]
 CMD ["--help"]
