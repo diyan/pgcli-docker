@@ -10,9 +10,15 @@ RUN set -x \
   && cd /tmp/py-setproctitle-version-1.1.9/ \
   && sed -i 's:#include <linux/prctl.h>://#include <linux/prctl.h>:' ./src/spt_status.c \
   && python setup.py install \
-  && pip install pgcli==0.20.1 \
+  && pip install pgcli==1.10.3 \
   && apk del $buildDeps \
   && rm -rf /var/cache/apk/* /tmp/py-setproctitle*
+
+# a volume for:
+# 1 pgcli-config
+# 2 pgcli-log
+# 3 pgcli-hisory
+VOLUME /root/.config/pgcli
 
 ENTRYPOINT ["/usr/local/bin/pgcli"]
 CMD ["--help"]
