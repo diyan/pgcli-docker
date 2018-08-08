@@ -1,5 +1,6 @@
 # pgcli-docker
-pgcli in a tiny Docker image powered by Alpine Linux
+
+[`pgcli`](https://www.pgcli.com/) in a tiny Docker image powered by [Alpine Linux](https://alpinelinux.org/)
 
 # How to use this image
 
@@ -37,3 +38,11 @@ host-machine, just mount the volume to the path `/root/.config/pgcli/` for
 ```bash
 docker run -v $(pwd)/pgcli-cfg:/root/.config/pgcli/ --rm diyan/pgcli --help
 ```
+
+# AUTHORS
+
+* [Alexey Diyan](http://diyan.github.io/)
+
+# LICENSE
+
+[MIT](https://github.com/diyan/pgcli-docker/blob/master/LICENSE)
