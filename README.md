@@ -29,3 +29,11 @@ docker run --rm -ti --name=pgcli \
   --dbname=postgres \
   --user=postgres
 ```
+
+If you want to preserve **query-history, pgcli-log and pgcli-config** on the
+host-machine, just mount the volume to the path `/root/.config/pgcli/` for
+`pgcli` files:
+
+```bash
+docker run -v $(pwd)/pgcli-cfg:/root/.config/pgcli/ --rm diyan/pgcli --help
+```
