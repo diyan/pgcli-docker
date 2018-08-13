@@ -1,5 +1,5 @@
 FROM python:3.5-alpine
-MAINTAINER Alexey Diyan <alexey.diyan@gmail.com><Paste>
+MAINTAINER Alexey Diyan <alexey.diyan@gmail.com>
 
 # py-setproctitle workaround: https://github.com/dvarrazzo/py-setproctitle/issues/44
 RUN set -x \
